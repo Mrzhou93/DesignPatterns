@@ -1,0 +1,15 @@
+package builder.entity.burger.impl;
+
+import builder.entity.Item;
+import builder.entity.pack.Packing;
+import builder.entity.pack.impl.Wrapper;
+
+public abstract class Burger implements Item {
+    @Override
+    public Packing packing() {
+        return new Wrapper();
+    }
+
+    @Override
+    public abstract float price();
+}
